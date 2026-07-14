@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PagePilot by Maruf</title>
+  <meta name="description" content="Professional business page management by PagePilot by Maruf." />
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --accent:#22c55e;
+      --accent2:#38bdf8;
+      --text:#f8fafc;
+      --muted:#cbd5e1;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(135deg,#0f172a,#111827 55%,#0b1120);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .container{width:min(1100px,92%);margin:auto}
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:60px 0;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-block;
+      padding:8px 14px;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:999px;
+      color:var(--accent2);
+      background:rgba(56,189,248,.08);
+      font-weight:700;
+      font-size:14px;
+    }
+    h1{
+      font-size:clamp(42px,7vw,78px);
+      line-height:1.05;
+      margin:18px 0;
+    }
+    h1 span{color:var(--accent)}
+    .lead{
+      font-size:clamp(18px,2.5vw,24px);
+      color:var(--muted);
+      max-width:680px;
+    }
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:14px 22px;
+      border-radius:12px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .primary{background:var(--accent);color:#052e16}
+    .secondary{
+      border:1px solid rgba(255,255,255,.18);
+      color:var(--text);
+      background:rgba(255,255,255,.05);
+    }
+    .card{
+      background:rgba(17,24,39,.82);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 25px 70px rgba(0,0,0,.35);
+      backdrop-filter:blur(12px);
+    }
+    .card h2{margin-top:0}
+    .service{
+      margin:18px 0;
+      padding:18px;
+      border-radius:16px;
+      background:rgba(255,255,255,.04);
+    }
+    .service strong{color:var(--accent2)}
+    section{padding:80px 0}
+    .section-title{text-align:center;margin-bottom:35px}
+    .section-title h2{font-size:38px;margin-bottom:10px}
+    .section-title p{color:var(--muted);margin-top:0}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .mini-card{
+      padding:24px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .mini-card h3{margin-top:0;color:var(--accent2)}
+    .cta{
+      text-align:center;
+      background:linear-gradient(135deg,rgba(34,197,94,.18),rgba(56,189,248,.16));
+      border:1px solid rgba(255,255,255,.1);
+      padding:45px 25px;
+      border-radius:24px;
+    }
+    footer{
+      text-align:center;
+      color:#94a3b8;
+      padding:30px 0 45px;
+    }
+    @media(max-width:800px){
+      .hero,.grid{grid-template-columns:1fr}
+      header{min-height:auto;padding-top:90px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <span class="badge">Professional Facebook Page Management</span>
+        <h1>Grow your business with <span>PagePilot by Maruf</span></h1>
+        <p class="lead">
+          আপনার ব্যবসায়িক পেজকে আরও পেশাদার, নিয়মিত ও বিশ্বাসযোগ্যভাবে পরিচালনা করতে আমরা পাশে আছি।
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="tel:+8801765797851">Call Now</a>
+          <a class="btn secondary" href="https://wa.me/8801765797851" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Our Main Service</h2>
+        <div class="service">
+          <strong>Business Page Management</strong>
+          <p>নিয়মিত পোস্ট, কনটেন্ট পরিকল্পনা, ইনবক্স ও কমেন্ট ব্যবস্থাপনা এবং পেজের পেশাদার উপস্থিতি তৈরি।</p>
+        </div>
+        <p><b>Phone:</b> 01765797851</p>
+        <p><b>WhatsApp:</b> 01765797851</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Us</h2>
+        <p>আপনার পেজকে নিয়মিত, সুন্দর ও ব্যবসাবান্ধবভাবে পরিচালনার জন্য প্রয়োজনীয় সহায়তা।</p>
+      </div>
+
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Professional Look</h3>
+          <p>আপনার পেজকে আরও বিশ্বাসযোগ্য ও আকর্ষণীয়ভাবে উপস্থাপন করা হবে।</p>
+        </div>
+        <div class="mini-card">
+          <h3>Regular Management</h3>
+          <p>নিয়মিত পোস্ট ও পেজের দৈনন্দিন কার্যক্রম পরিচালনায় সহায়তা।</p>
+        </div>
+        <div class="mini-card">
+          <h3>Direct Support</h3>
+          <p>ফোন বা WhatsApp-এর মাধ্যমে দ্রুত যোগাযোগের সুবিধা।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to manage your business page professionally?</h2>
+        <p>আজই PagePilot by Maruf-এর সাথে যোগাযোগ করুন।</p>
+        <div class="buttons" style="justify-content:center">
+          <a class="btn primary" href="tel:+8801765797851">01765797851</a>
+          <a class="btn secondary" href="https://wa.me/8801765797851" target="_blank">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 PagePilot by Maruf. All rights reserved.
+  </footer>
+</body>
+</html>
