@@ -1,133 +1,653 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PagePilot by Maruf</title>
+  <meta charset="UTF-8">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
-background:#0f172a;
-color:white;
-}
+  <title>PagePilot by Maruf | Business Page Management</title>
 
-header{
-text-align:center;
-padding:80px 20px;
-}
+  <meta name="description" content="PagePilot by Maruf থেকে পেশাদার Facebook Business Page Management, Content Creation, Inbox Management এবং Facebook Ads Service নিন।">
 
-header h1{
-font-size:48px;
-color:#22c55e;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-header p{
-margin-top:15px;
-font-size:20px;
-color:#ddd;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #08111f;
+      color: white;
+      line-height: 1.6;
+    }
 
-.btn{
-display:inline-block;
-margin:10px;
-padding:15px 30px;
-background:#22c55e;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-}
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 17, 31, 0.95);
+      border-bottom: 1px solid #243247;
+      padding: 15px 0;
+    }
 
-.card{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-margin-top:20px;
-}
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-h2{
-color:#38bdf8;
-margin-bottom:15px;
-}
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #22c55e;
+    }
 
-footer{
-text-align:center;
-padding:30px;
-background:#111827;
-margin-top:50px;
-}
-</style>
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #22c55e;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, rgba(34, 197, 94, 0.22), transparent 40%),
+        linear-gradient(135deg, #08111f, #101d32);
+      padding: 80px 0;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #22c55e;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: #cbd5e1;
+      font-size: 20px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #052e16;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #64748b;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #38bdf8;
+    }
+
+    .section-title p {
+      color: #94a3b8;
+      margin-top: 8px;
+    }
+
+    .about-box {
+      background: #111c2e;
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid #26344b;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #111c2e;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #26344b;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #22c55e;
+    }
+
+    .card h3 {
+      color: #22c55e;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #38bdf8;
+    }
+
+    .card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .card ul li {
+      margin: 10px 0;
+      color: #dbeafe;
+    }
+
+    .portfolio-box {
+      min-height: 190px;
+      background: #111c2e;
+      border: 2px dashed #475569;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #94a3b8;
+      padding: 20px;
+    }
+
+    .review {
+      font-style: italic;
+    }
+
+    .review-name {
+      margin-top: 15px;
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    details {
+      background: #111c2e;
+      border: 1px solid #26344b;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 15px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #cbd5e1;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #123024, #10223c);
+      padding: 45px 25px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #2e4c63;
+    }
+
+    .contact-box h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #050b14;
+      padding: 30px 15px;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    .floating-buttons {
+      position: fixed;
+      right: 18px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .floating-buttons a {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 23px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .call {
+      background: #38bdf8;
+    }
+
+    @media (max-width: 850px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .nav-content {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">PagePilot by Maruf</div>
 
-<h1>PagePilot by Maruf</h1>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<p>Professional Business Page Management Service</p>
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>
+        আপনার ব্যবসার পেজ পরিচালনা করবে
+        <span>PagePilot by Maruf</span>
+      </h1>
 
-<a class="btn" href="tel:+8801765797851">📞 Call Now</a>
+      <p>
+        Professional Business Page Management, Content Creation, Inbox Reply,
+        Comment Management এবং Facebook Ads Service।
+      </p>
 
-<a class="btn" href="https://wa.me/8801765797851">💬 WhatsApp</a>
+      <div class="buttons">
+        <a class="btn btn-primary"
+           href="https://wa.me/8801765797851"
+           target="_blank">
+          WhatsApp করুন
+        </a>
 
-</header>
+        <a class="btn btn-secondary"
+           href="tel:+8801765797851">
+          Call করুন
+        </a>
 
-<section>
+        <a class="btn btn-secondary"
+           href="#pricing">
+          Package দেখুন
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="card">
-<h2>Our Service</h2>
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>আমাদের সম্পর্কে</h2>
+        <p>আপনার ব্যবসার অনলাইন উপস্থিতিকে আরও পেশাদার করতে আমরা কাজ করি।</p>
+      </div>
 
-<p>
-✔ Business Page Management<br><br>
+      <div class="about-box">
+        <p>
+          <strong>PagePilot by Maruf</strong> ছোট ও মাঝারি ব্যবসার Facebook Page
+          নিয়মিত এবং পেশাদারভাবে পরিচালনা করে। আমাদের লক্ষ্য হলো সুন্দর কনটেন্ট,
+          দ্রুত কাস্টমার রিপ্লাই এবং পরিকল্পিত মার্কেটিংয়ের মাধ্যমে আপনার ব্যবসার
+          বিশ্বাসযোগ্যতা ও বিক্রি বাড়াতে সহায়তা করা।
+        </p>
+      </div>
+    </div>
+  </section>
 
-✔ Facebook Page Setup<br><br>
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>আমাদের সার্ভিস</h2>
+        <p>একটি ব্যবসায়িক পেজ পরিচালনার প্রয়োজনীয় সার্ভিসসমূহ।</p>
+      </div>
 
-✔ Regular Content Posting<br><br>
+      <div class="grid">
+        <div class="card">
+          <h3>Business Page Management</h3>
+          <p>আপনার ব্যবসায়িক পেজ নিয়মিত এবং পেশাদারভাবে পরিচালনা করা হবে।</p>
+        </div>
 
-✔ Inbox & Comment Management<br><br>
+        <div class="card">
+          <h3>Content Creation</h3>
+          <p>ব্যবসার ধরন অনুযায়ী পোস্টের লেখা, আইডিয়া ও কনটেন্ট পরিকল্পনা।</p>
+        </div>
 
-✔ Professional Branding
-</p>
+        <div class="card">
+          <h3>Post Design</h3>
+          <p>আকর্ষণীয় ও পেশাদার Social Media Post Design তৈরি করা হবে।</p>
+        </div>
 
-</div>
+        <div class="card">
+          <h3>Inbox Management</h3>
+          <p>কাস্টমারদের ইনবক্সে দ্রুত এবং ভদ্রভাবে উত্তর দেওয়া হবে।</p>
+        </div>
 
-<div class="card">
+        <div class="card">
+          <h3>Comment Management</h3>
+          <p>পোস্টের কমেন্ট দেখা, প্রয়োজনীয় উত্তর এবং কাস্টমার সাপোর্ট।</p>
+        </div>
 
-<h2>Contact</h2>
+        <div class="card">
+          <h3>Facebook Ads</h3>
+          <p>সঠিক অডিয়েন্স নির্বাচন করে Facebook Ads ও Boost পরিচালনা।</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p>
+  <section id="pricing">
+    <div class="container">
+      <div class="section-title">
+        <h2>আমাদের প্যাকেজ</h2>
+        <p>আপনার ব্যবসার প্রয়োজন অনুযায়ী প্যাকেজ নির্বাচন করুন।</p>
+      </div>
 
-📱 Phone: 01765797851
+      <div class="grid">
+        <div class="card">
+          <h3>Starter Package</h3>
+          <div class="price">৳২,০০০ / মাস</div>
 
-<br><br>
+          <ul>
+            <li>✓ নিয়মিত পোস্ট</li>
+            <li>✓ Page Management</li>
+            <li>✓ Basic Inbox Reply</li>
+            <li>✓ Comment Management</li>
+          </ul>
 
-WhatsApp: 01765797851
+          <a class="btn btn-primary"
+             href="https://wa.me/8801765797851?text=আমি Starter Package সম্পর্কে জানতে চাই।"
+             target="_blank">
+            বুক করুন
+          </a>
+        </div>
 
-</p>
+        <div class="card">
+          <h3>Business Package</h3>
+          <div class="price">৳৪,০০০ / মাস</div>
 
-</div>
+          <ul>
+            <li>✓ নিয়মিত পোস্ট</li>
+            <li>✓ Content Creation</li>
+            <li>✓ Inbox ও Comment Reply</li>
+            <li>✓ Basic Post Design</li>
+            <li>✓ Monthly Report</li>
+          </ul>
 
-</section>
+          <a class="btn btn-primary"
+             href="https://wa.me/8801765797851?text=আমি Business Package সম্পর্কে জানতে চাই।"
+             target="_blank">
+            বুক করুন
+          </a>
+        </div>
 
-<footer>
+        <div class="card">
+          <h3>Premium Package</h3>
+          <div class="price">৳৭,০০০ / মাস</div>
 
-© 2026 PagePilot by Maruf
+          <ul>
+            <li>✓ Full Page Management</li>
+            <li>✓ Premium Content Creation</li>
+            <li>✓ Post Design</li>
+            <li>✓ Inbox ও Comment Management</li>
+            <li>✓ Ads Support</li>
+            <li>✓ Monthly Performance Report</li>
+          </ul>
 
-</footer>
+          <a class="btn btn-primary"
+             href="https://wa.me/8801765797851?text=আমি Premium Package সম্পর্কে জানতে চাই।"
+             target="_blank">
+            বুক করুন
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <h2>আমাদের কাজ</h2>
+        <p>এখানে পরে আপনার কাজের স্ক্রিনশট যোগ করবেন।</p>
+      </div>
+
+      <div class="grid">
+        <div class="portfolio-box">
+          এখানে Client Page-এর Before/After Screenshot যোগ করুন
+        </div>
+
+        <div class="portfolio-box">
+          এখানে Reach অথবা Engagement Result-এর Screenshot যোগ করুন
+        </div>
+
+        <div class="portfolio-box">
+          এখানে Customer Review অথবা Sales Result যোগ করুন
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <h2>Client Reviews</h2>
+        <p>শুধু বাস্তব ক্লায়েন্টের রিভিউ ব্যবহার করবেন।</p>
+      </div>
+
+      <div class="grid">
+        <div class="card review">
+          “Page Management Service খুব ভালো ছিল। নিয়মিত পোস্ট এবং দ্রুত রিপ্লাই পেয়েছি।”
+
+          <div class="review-name">— Client Name</div>
+        </div>
+
+        <div class="card review">
+          “আমার ব্যবসার পেজ আগের তুলনায় অনেক বেশি পেশাদার দেখাচ্ছে।”
+
+          <div class="review-name">— Client Name</div>
+        </div>
+
+        <div class="card review">
+          “কাজের মান এবং যোগাযোগ দুটোই ভালো ছিল।”
+
+          <div class="review-name">— Client Name</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>সাধারণ প্রশ্ন</h2>
+      </div>
+
+      <details>
+        <summary>মাসিক সার্ভিস চার্জ কত?</summary>
+        <p>আমাদের সার্ভিস চার্জ মাসিক ২,০০০ টাকা থেকে শুরু।</p>
+      </details>
+
+      <details>
+        <summary>কম ফলোয়ার থাকলে কি কাজ করবেন?</summary>
+        <p>হ্যাঁ। কম ফলোয়ার বা কম লাইক থাকলেও কোনো সমস্যা নেই।</p>
+      </details>
+
+      <details>
+        <summary>Facebook Boost বা Ads করেন?</summary>
+        <p>হ্যাঁ। প্রয়োজন অনুযায়ী Boost এবং Facebook Ads পরিচালনায় সহায়তা করা হয়। বিজ্ঞাপনের বাজেট আলাদা।</p>
+      </details>
+
+      <details>
+        <summary>কত দিনে ফল পাওয়া যাবে?</summary>
+        <p>পেজের অবস্থা, ব্যবসার ধরন, বাজেট ও কনটেন্টের উপর ফলাফল নির্ভর করে। নির্দিষ্ট বিক্রির নিশ্চয়তা দেওয়া হয় না।</p>
+      </details>
+
+      <details>
+        <summary>কীভাবে কাজ শুরু করব?</summary>
+        <p>WhatsApp-এ যোগাযোগ করে আপনার পেজের লিংক এবং প্রয়োজনীয় তথ্য পাঠান।</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>আপনার ব্যবসার পেজ পরিচালনা করতে চান?</h2>
+
+        <p>
+          আজই PagePilot by Maruf-এর সঙ্গে যোগাযোগ করুন।
+        </p>
+
+        <div class="contact-info">
+          📞 Phone: 01765797851
+          <br>
+          💬 WhatsApp: 01765797851
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-primary"
+             href="https://wa.me/8801765797851"
+             target="_blank">
+            WhatsApp Message
+          </a>
+
+          <a class="btn btn-secondary"
+             href="tel:+8801765797851">
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 PagePilot by Maruf. All Rights Reserved.
+    </p>
+  </footer>
+
+  <div class="floating-buttons">
+    <a class="whatsapp"
+       href="https://wa.me/8801765797851"
+       target="_blank"
+       title="WhatsApp">
+      💬
+    </a>
+
+    <a class="call"
+       href="tel:+8801765797851"
+       title="Call">
+      📞
+    </a>
+  </div>
 
 </body>
 </html>
